@@ -5,7 +5,7 @@ import {globalStyle} from "../Style/HeaderS";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 
-export default class Lang1 extends Component {
+export default class LangUn extends Component {
     constructor(props) {
         super(props);
     }
