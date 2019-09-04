@@ -1,6 +1,7 @@
 import React from 'react';
 import {  Text, View } from 'react-native';
 import Header from './Components/Header.js';
+import Lang1 from './Components/Lang1.js';
 import Body from './Components/Body.js';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -21,6 +22,7 @@ export default function App() {
             }
             title="Button with icon component"
         />
+        <Lang1/>
         <Body/>
     </View>
   );
