@@ -11,16 +11,25 @@ export default class ViewButton extends Component {
 
     render() {
         return (
-            <View >
+            <View style ={{flexDirection:'row', justifyContent:'space-around',marginTop:20, marginBottom:20}} >
                 <Button
                     icon={
                         <Icon
-                            name="arrow-right"
-                            size={15}
+                            name='microphone'
+                            size={30}
                             color="white"
                         />
                     }
-                    title="Audio"
+                />
+                <Button
+                    icon={
+                        <Icon
+                            name="play"
+                            size={30}
+                            color="white"
+                        />
+                    }
+
                 />
             </View>
         )
