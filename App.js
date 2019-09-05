@@ -21,6 +21,10 @@ export default class App extends React.Component {
   setMorseText = (MorseText) => {
     this.setState({TextMorse : MorseText})
   }
+  
+  copyLangUnMorse = (FrText) => {
+    this.setState({TextLangUn : MorseText})
+  }
 
   render() {
     return (

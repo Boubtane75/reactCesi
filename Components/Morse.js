@@ -44,7 +44,7 @@ export default class Morse extends Component {
                 }
                 onChangeText={(text) => this.props.setMorseText(text)}
                 value={this.props.text}
-                text = {this.props.text}
+                // text = {this.props.text}
                 />
 
                 <Text style= {[{backgroundColor: 'lightblue'}, {textAlign: 'center'}]}>

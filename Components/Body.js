@@ -15,7 +15,9 @@ export default class Body extends Component {
             <View style={BodyStyle.container}>
                 <LangUn/>
                 <LangDeux/>
-                <Morse text = {this.props.TextMorse } setMorseText={this.props.setMorseText}/>
+                <Morse text = {this.props.TextMorse }
+                setMorseText={this.props.setMorseText}
+                copyLangUnMorse={this.props.copyLangUnMorse}/>
             </View>
         )
     }
