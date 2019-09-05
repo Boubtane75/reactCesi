@@ -9,9 +9,14 @@ import { Input, Button } from 'react-native-elements';
 export default class Morse extends Component {
     constructor(props) {
         super(props);
+        // this.state={
+        //     text : '...---...',
+        // }
     }
 
+    
     render() {
+        console.log(this.props);
         return (
             <View>
                 <Button
@@ -27,7 +32,7 @@ export default class Morse extends Component {
 
 
                 <Input
-                placeholder=' Morse'
+                placeholder= {this.props.text}
                 leftIcon={
                     <Icon
                     type= 'font-awesome5'
@@ -35,8 +40,16 @@ export default class Morse extends Component {
                     size={24}
                     color='black'
                     />
+                    
                 }
+                onChangeText={(text) => this.props.setMorseText(text)}
+                value={this.props.text}
+                text = {this.props.text}
                 />
+
+                <Text style= {[{backgroundColor: 'lightblue'}, {textAlign: 'center'}]}>
+                    {this.props.text}
+                </Text>
             </View>
         )
     }
