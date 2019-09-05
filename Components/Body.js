@@ -23,6 +23,8 @@ export default class Body extends Component {
                     setMorseText={this.props.setMorseText}
                     copyLangUnMorse={this.props.copyLangUnMorse}
                     TextLangUn={this.props.TextLangUn}
+                    beepMorse = {this.props.beepMorse}
+                    speak = {this.props.speak}
                 />
             </View>
         )

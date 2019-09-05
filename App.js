@@ -3,7 +3,9 @@ import { Text, View } from 'react-native';
 import AppHeader from './Components/Header.js';
 import Body from './Components/Body.js';
 import Button from './Components/Boutons';
-
+import morselib from 'morse-lib';
+import Audio from 'expo-av';
+import * as Speech from 'expo-speech';
 
 
 
@@ -12,10 +14,25 @@ export default class App extends React.Component {
     super();
 
     this.state = {
-      TextLangUn: 'toto',
+      TextLangUn: 'La traduction en morse est ?',
       TextLangDeux: 'tpopo',
       TextMorse:'......----..',
     };
+  }
+
+  beepMorse = () => {
+
+    alert('Si vous n\'étiez pas sourd, vous entendriez bipper...')
+  }
+
+  speak= (t) => {
+    var thingToSay1 = 'La traduction en morse est ';
+    var thingToSay = this.state.TextLangUn;
+    // var thingToSay = this.state.TextMorse;
+    // Speech.speak(thingToSay);
+    alert(thingToSay + ' se traduit par ' + t);
+    Speech.speak(thingToSay + ' se traduit par ' + t);
+
   }
 
   setLangUnText = (LangUnText) => {
@@ -28,7 +45,9 @@ export default class App extends React.Component {
 
   copyLangUnMorse = () => {
     let t = this.state.TextLangUn
-    this.setState({TextMorse : t})
+    let m = new morselib()
+    m = m.encode(t)
+    this.setState({TextMorse : m})
   }
 
   render() {
@@ -42,6 +61,8 @@ export default class App extends React.Component {
           setMorseText={this.setMorseText}
           TextLangUn = {this.state.TextLangUn}
           copyLangUnMorse = {this.copyLangUnMorse}
+          beepMorse = {this.beepMorse}
+          speak = {this.speak}
         />
       </View>
     );

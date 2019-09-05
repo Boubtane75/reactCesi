@@ -63,6 +63,17 @@ export default class Morse extends Component {
                 {/* <Text style= {[{backgroundColor: 'lightblue'}, {textAlign: 'center'}]}>
                     {this.props.text}
                 </Text> */}
+                <Button onPress={() => this.props.speak(this.props.text)}
+                icon={
+                    <Icon
+                    name="arrow-right"
+                    size={15}
+                    color="white"
+                    />
+                }
+                title=" Beep"
+                // disabled = 'true'
+            />
             </View>
         )
     }
