@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import {globalStyle} from "../Style/HeaderS";
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { Input } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Input, Button } from 'react-native-elements';
 
 export default class LangUn extends Component {
     constructor(props) {
@@ -19,15 +19,26 @@ export default class LangUn extends Component {
             />
 
             <Input
-            placeholder='INPUT WITH ICON'
-            leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+            placeholder=' INPUT WITH ICON'
+            leftIcon={{ type: 'font-awesome', name: 'globe' }}
             />
+                <Button
+                    icon={
+                        <Icon
+                            name="arrow-down"
+                            size={15}
+                            color="white"
+                        />
+                    }
+                    title=" Morse"
+                />
 
             <Input
             placeholder='INPUT WITH CUSTOM ICON'
             leftIcon={
                 <Icon
-                name='user'
+                type= 'font-awesome5'
+                name='comment-dots'
                 size={24}
                 color='black'
                 />
