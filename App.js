@@ -18,12 +18,17 @@ export default class App extends React.Component {
     };
   }
 
+  setLangUnText = (LangUnText) => {
+    this.setState({TextLangUn : LangUnText})
+  }
+
   setMorseText = (MorseText) => {
     this.setState({TextMorse : MorseText})
   }
-  
-  copyLangUnMorse = (FrText) => {
-    this.setState({TextLangUn : MorseText})
+
+  copyLangUnMorse = () => {
+    let t = this.state.TextLangUn
+    this.setState({TextMorse : t})
   }
 
   render() {
@@ -31,7 +36,13 @@ export default class App extends React.Component {
       <View style={{ flex: 1 }}>
         <AppHeader />
         <Button title="Button with icon component" />
-        <Body TextMorse = {this.state.TextMorse} setMorseText={this.setMorseText} />
+        <Body
+          TextMorse = {this.state.TextMorse}
+          setLangUnText={this.setLangUnText}
+          setMorseText={this.setMorseText}
+          TextLangUn = {this.state.TextLangUn}
+          copyLangUnMorse = {this.copyLangUnMorse}
+        />
       </View>
     );
   }

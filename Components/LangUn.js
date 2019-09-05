@@ -14,42 +14,11 @@ export default class LangUn extends Component {
         return (
             <View>
 
-            {/* <Input
-            placeholder='BASIC INPUT'
-            /> */}
-
             <Input
             placeholder=' Texte en français'
             leftIcon={{ type: 'font-awesome', name: 'globe' }}
+            onChangeText={(text) => this.props.setLangUnText(text)}
             />
-{/* 
-            <Button
-                icon={
-                    <Icon
-                        name="arrow-down"
-                        size={15}
-                        color="white"
-                    />
-                }
-                title=" Traduction"
-            />
-
-            <Input
-            placeholder=' Texte en langue 2'
-            leftIcon={{ type: 'font-awesome', name: 'globe' }}
-            /> */}
-
-
-            {/* <Input
-            placeholder='INPUT WITH SHAKING EFFECT'
-            shake={true}
-            />
-
-            <Input
-            placeholder='INPUT WITH ERROR MESSAGE'
-            errorStyle={{ color: 'red' }}
-            errorMessage='ENTER A VALID ERROR HERE'
-            /> */}
             </View>
         )
     }

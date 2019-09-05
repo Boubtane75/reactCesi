@@ -13,11 +13,17 @@ export default class Body extends Component {
     render() {
         return (
             <View style={BodyStyle.container}>
-                <LangUn/>
+                <LangUn
+                    text = {this.props.textLangUn}
+                    setLangUnText={this.props.setLangUnText}
+                />
                 <LangDeux/>
-                <Morse text = {this.props.TextMorse }
-                setMorseText={this.props.setMorseText}
-                copyLangUnMorse={this.props.copyLangUnMorse}/>
+                <Morse
+                    text = {this.props.TextMorse }
+                    setMorseText={this.props.setMorseText}
+                    copyLangUnMorse={this.props.copyLangUnMorse}
+                    TextLangUn={this.props.TextLangUn}
+                />
             </View>
         )
     }

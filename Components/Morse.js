@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {globalStyle} from "../Style/HeaderS";
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -9,9 +9,6 @@ import { Input, Button } from 'react-native-elements';
 export default class Morse extends Component {
     constructor(props) {
         super(props);
-        // this.state={
-        //     text : '...---...',
-        // }
     }
 
     
@@ -19,6 +16,20 @@ export default class Morse extends Component {
         console.log(this.props);
         return (
             <View>
+
+            <Button onPress={() => this.props.copyLangUnMorse()}
+                icon={
+                    <Icon
+                    name="arrow-down"
+                    size={15}
+                    color="white"
+                    />
+                }
+                title=" Morse"
+                // disabled = 'true'
+                />
+
+            {/* <TouchableOpacity onPress={() => this.props.copyLangUnMorse()}>
                 <Button
                 icon={
                     <Icon
@@ -28,7 +39,9 @@ export default class Morse extends Component {
                     />
                 }
                 title=" Morse"
+                disabled = 'true'
                 />
+            </TouchableOpacity> */}
 
 
                 <Input
@@ -47,9 +60,9 @@ export default class Morse extends Component {
                 // text = {this.props.text}
                 />
 
-                <Text style= {[{backgroundColor: 'lightblue'}, {textAlign: 'center'}]}>
+                {/* <Text style= {[{backgroundColor: 'lightblue'}, {textAlign: 'center'}]}>
                     {this.props.text}
-                </Text>
+                </Text> */}
             </View>
         )
     }
