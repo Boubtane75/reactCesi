@@ -14,38 +14,33 @@ export default class LangUn extends Component {
         return (
             <View>
 
-            <Input
+            {/* <Input
             placeholder='BASIC INPUT'
-            />
+            /> */}
 
             <Input
-            placeholder=' INPUT WITH ICON'
+            placeholder=' Texte en français'
             leftIcon={{ type: 'font-awesome', name: 'globe' }}
             />
-                <Button
-                    icon={
-                        <Icon
-                            name="arrow-down"
-                            size={15}
-                            color="white"
-                        />
-                    }
-                    title=" Morse"
-                />
-
-            <Input
-            placeholder='INPUT WITH CUSTOM ICON'
-            leftIcon={
-                <Icon
-                type= 'font-awesome5'
-                name='comment-dots'
-                size={24}
-                color='black'
-                />
-            }
+{/* 
+            <Button
+                icon={
+                    <Icon
+                        name="arrow-down"
+                        size={15}
+                        color="white"
+                    />
+                }
+                title=" Traduction"
             />
 
             <Input
+            placeholder=' Texte en langue 2'
+            leftIcon={{ type: 'font-awesome', name: 'globe' }}
+            /> */}
+
+
+            {/* <Input
             placeholder='INPUT WITH SHAKING EFFECT'
             shake={true}
             />
@@ -54,7 +49,7 @@ export default class LangUn extends Component {
             placeholder='INPUT WITH ERROR MESSAGE'
             errorStyle={{ color: 'red' }}
             errorMessage='ENTER A VALID ERROR HERE'
-            />
+            /> */}
             </View>
         )
     }
